@@ -1,0 +1,1048 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0z;
+}
+
+body {
+  max-width: 1440px;
+  height: 100vh;
+  background: hsl(0, 0%, 98%);
+  margin: auto;
+  border-right: 1px solid hsl(0, 0%, 41%);
+  border-left: 1px solid hsl(0, 0%, 41%);
+}
+
+/* Media queries for all desktop screens */
+@media (min-width: 769px) {
+
+  nav {
+    width: 100%;
+    height: 80px;
+    background: hsl(0, 0%, 98%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+    position: relative;
+  }
+  
+  .logo {
+    width: 10%;
+    height: auto;
+    text-align: center;
+  }
+  
+  .nav-icon {
+    display: none;
+  }
+  
+  .nav-menu {
+    width: 90%;
+    height: auto;
+  }
+
+  .nav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-close-icon {
+    display: none;
+  }
+
+  .menu, .cta {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    position: relative;
+  }
+  
+  .menu li, .cta li {
+    margin-right: 30px;
+    font-size: 1.1rem;
+    position: relative;
+    color: hsl(0, 0%, 41%);
+    cursor: pointer;
+    letter-spacing: 1px;
+  }
+  
+  .menu li:hover, .cta li:hover {
+    color: hsl(0, 0%, 8%);
+    font-weight: 600;
+  }
+  
+  .features, .company {
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    background: #fff;
+    width: 150px;
+    height: 0px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0px 5px 40px hsla(0, 0%, 41%, 0.712);
+    padding-top: 15px;
+    display: none;
+  }
+
+  /* A toggled class to show the drop down feature menu */
+  .show-feature {
+    animation: slidefeature 1s linear 1 normal forwards;/*Animation to smoothly show the drop down menu */
+    -webkit-animation: slidefeature 1s linear 1 normal forwards;
+    display: block;
+    overflow: hidden;
+  }
+
+  /* A toggled class to show the drop down company menu */
+  .show-company {
+    animation: slidecompany 1s linear 1 normal forwards;/*Animation to smoothly show the drop down menu */
+    -webkit-animation: slidecompany 1s linear 1 normal forwards;
+    display: block;
+    overflow: hidden;
+  }
+
+  /* @keyframes for the animations */
+  @keyframes slidefeature {
+    25% {
+      height: 40px;
+    }
+    100% {
+      height: 160px;
+    }
+  }
+  
+  @keyframes slidecompany {
+    25% {
+      height: 30px;
+    }
+    100% {
+      height: 120px;
+    }
+  }
+  
+  .company {
+    left: 170px;
+    list-style: none;
+    width: 130px;
+  }
+  
+  .features li {
+    margin: 0px 0px 15px 5px;
+    font-size: 1rem;
+    color: hsl(0, 0%, 41%);
+  }
+  
+  .features li:hover, .company li:hover {
+    color: hsl(0, 0%, 8%);
+    font-weight: 600;
+  }
+  
+  .features li:nth-child(1) {
+    list-style-image: url("./images/icon-todo.svg");
+  }
+  
+  .features li:nth-child(2) {
+    list-style-image: url("./images/icon-calendar.svg");
+  }
+  
+  .features li:nth-child(3) {
+    list-style-image: url("./images/icon-reminders.svg");
+  }
+  
+  .features li:nth-child(4) {
+    list-style-image: url("./images/icon-planning.svg");
+  }
+  
+  .company li {
+    margin: 0px 0px 15px -10px;
+    font-size: 1rem;
+    color: hsl(0, 0%, 41%);
+  }
+  
+  .cta li:nth-child(2) {
+    border: 1px solid hsl(0, 0%, 41%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 10px 20px;
+  }
+  
+  .cta li:nth-child(2):hover {
+    border: 2px solid hsl(0, 0%, 41%);
+  }
+
+  main {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row-reverse;
+    -ms-flex-flow: row-reverse;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  
+  .header-img {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header-img img {
+    width: 100%;
+    height: 500px;
+  }
+  
+  .main-content {
+    width: 550px;
+    height: 100%;
+    padding: 0px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .main-content h1 {
+    color: hsl(0, 0%, 8%);
+    font-size: 4.3rem;
+    margin-top: 70px;
+    line-height: 75px;
+  }
+  
+  .main-content p {
+    color: hsl(0, 0%, 41%);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-top: -40px;
+  }
+  
+  .main-content button {
+    width: 130px;
+    height: auto;
+    font-size: .9rem;
+    padding: 15px 0px;
+    background: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-top: -40px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+  
+  .main-content button:hover {
+    color: hsl(0, 0%, 8%);
+    background: hsl(0, 0%, 98%);
+    border: 2px solid hsl(0, 0%, 8%);
+    font-weight: 600;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+  
+  .brand-imgs {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .brand-imgs img {
+    width: 60px;
+  }
+  
+  
+  .attribution { 
+    font-size: .9rem; 
+    padding-bottom: 20px; 
+    text-align: center; 
+  }
+  
+  .attribution a {
+    color: hsl(228, 45%, 44%); 
+  }
+
+  /* This specified media querries below inherited the animations */
+  @media (min-width: 900px) and (max-width: 1200px) {
+    .logo img {
+      width: 100px;
+      height: auto;
+    }
+  
+    .menu li, .cta li {
+      margin: 0px 10px;
+      font-size: 1rem;
+      width: 90px;
+    }
+  
+    .features li, .company li {
+      font-size: 1rem;
+      margin: 0px 0px 15px 5px;
+    }
+
+    .company li {
+      margin: 0px 0px 15px -10px;
+    }
+  
+    .cta li {
+      margin: 0px 5px;
+    }
+  
+    .cta li:nth-child(2) {
+      padding: 10px 15px;
+    }
+  
+    main {
+      width: 85%;
+    }
+  
+    .header-img img {
+      width: 100%;
+      height: 400px;
+    }
+  
+    .main-content {
+      padding: 0px 60px;
+    }
+    
+    .main-content h1 {
+      font-size: 3.5rem;
+      margin-top: 75px;
+      line-height: 60px;
+    }
+    
+    .main-content p {
+      margin-top: -100px;
+    }
+    
+    .main-content button {
+      width: 130px;
+      height: auto;
+      margin-top: -80px;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 899px) {
+    .logo img {
+      width: 90px;
+      height: auto;
+    }
+  
+    .menu li, .cta li {
+      margin-right: 10px;
+      font-size: 1rem;
+      width: 90px;
+    }
+  
+    .features, .company {
+      width: 120px;
+      height: 0px;
+    }
+  
+    .company {
+      left: 120px;
+    }
+  
+    .features li, .company li {
+      font-size: .8rem;
+      padding: 8px 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin-left: -5px;
+    }
+  
+    .cta li {
+      width: 60px;
+      margin: 0px 2px;
+    }
+  
+    .cta li:nth-child(2) {
+      width: 90px;
+      padding: 6px 15px;
+    }
+  
+    .header-img {
+      width: 400px;
+    }
+  
+    .header-img img {
+      width: 100%;
+      height: 380px;
+    }
+  
+    .main-content {
+      padding: 0px 30px;
+      justify-content: space-evenly;
+    }
+    
+    .main-content h1 {
+      font-size: 3rem;
+      line-height: 40px;
+    }
+    
+    .main-content p {
+      font-size: 1rem;
+      line-height: 20px;
+    }
+    
+    .main-content button {
+      width: 110px;
+      height: auto;
+      padding: 10px 0px;
+    }
+  
+    .brand-imgs img {
+      width: 50px;
+    }
+  
+  }
+}
+
+/* Media queries for ipads */
+@media (min-width: 500px) and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  nav {
+    width: 100%;
+    height: 80px;
+    background: hsl(0, 0%, 98%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+    position: relative;
+  }
+  
+  .logo {
+    width: 10%;
+    height: auto;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+
+  .nav-icon {
+    cursor: pointer;
+  }
+  
+  .nav-menu {
+    width: 100%;
+    height: 100vh;
+    background: #0000005e;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+    display: none;
+  }
+
+  .nav {
+    width: 50%;
+    height: 100vh;
+    background: hsl(0, 0%, 98%);
+    position: absolute;
+    top: 0%;
+    right: -50%;
+    padding: 30px;
+  }
+
+  .nav-close-icon {
+    width: 100%;
+    height: auto;
+    text-align: right;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+
+  /* Toggled class to show the side nav parent element that has a transparent background */
+  .show-parent {
+    display: block;
+  }
+  
+  /* Toggled class to show the side nav menu on ipad */
+  .show-nav {
+    animation: showNav 1s linear 1 normal forwards;
+    -webkit-animation: showNav 1s linear 1 normal forwards;
+  }
+
+  /* Animations to make the side nav menu slide in smoothly */
+  @keyframes showNav {
+    0% {
+      right: -50%;
+    }
+    100% {
+      right: 0%
+    }
+  }
+
+  /* Toggled class to hide the side nav parent element that has a transparent background */
+  .hide-parent {
+    animation: hideParent 1s linear 1 normal forwards;
+    -webkit-animation: hideParent 1s linear 1 normal forwards;
+  }
+
+  /* Animation to hide the parent side nav parent element that has a transparent background */
+  @keyframes hideParent {
+    0% {
+      opacity: 50%;
+    }
+    100% {
+      display: none;
+      opacity: 0%;
+    }
+  }
+
+  .hide-nav {
+    animation: hideNav 1s linear 1 normal forwards;
+    -webkit-animation: hideNav 1s linear 1 normal forwards;
+  }
+
+  @keyframes hideNav {
+    0% {
+      right: 0%;
+    }
+    100% {
+      right: -50%;
+      display: none;
+    }
+  }
+
+  .menu {
+    position: relative;
+    margin-bottom: 40px;
+    text-align: left;
+    padding-left: 0px;
+  }
+  
+  .menu li, .cta li {
+    font-size: 1rem;
+    color: hsl(0, 0%, 41%);
+    cursor: pointer;
+    letter-spacing: 1px;
+    list-style: none;
+    margin: 0px 0px 10px;
+  }
+  
+  .menu li:hover, .cta li:hover {
+    color: hsl(0, 0%, 8%);
+    font-weight: 600;
+  }
+  
+  .features, .company {
+    padding-left: 35px;
+    height: 0px;
+    overflow: hidden;
+  }
+
+  .show-feature {
+    animation: slidefeature 1s linear 1 normal forwards;
+    -webkit-animation: slidefeature 1s linear 1 normal forwards;
+    display: block;
+    overflow: hidden;
+  }
+
+  .show-company {
+    animation: slidecompany 1s linear 1 normal forwards;
+    -webkit-animation: slidecompany 1s linear 1 normal forwards;
+    display: block;
+    overflow: hidden;
+  }
+
+  @keyframes slidefeature {
+    25% {
+      height: 30px;
+    }
+    100% {
+      height: 120px;
+    }
+  }
+  
+  @keyframes slidecompany {
+    25% {
+      height: 21px;
+    }
+    100% {
+      height: 88px;
+    }
+  }
+
+  .company {
+    padding-left: 15px;
+  }
+  
+  .features li:nth-child(1) {
+    list-style-image: url("./images/icon-todo.svg");
+  }
+  
+  .features li:nth-child(2) {
+    list-style-image: url("./images/icon-calendar.svg");
+  }
+  
+  .features li:nth-child(3) {
+    list-style-image: url("./images/icon-reminders.svg");
+  }
+  
+  .features li:nth-child(4) {
+    list-style-image: url("./images/icon-planning.svg");
+  }
+
+  .cta {
+    width: 100%;
+    height: auto;
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .cta li:nth-child(2) {
+    width: 100%;
+    border: 1px solid hsl(0, 0%, 41%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .cta li:nth-child(2):hover {
+    border: 2px solid hsl(0, 0%, 41%);
+  }
+
+  main {
+    width: 70%;
+    height: auto;
+    margin: 30px auto 0px;
+  }
+  
+  .header-img {
+    width: 100%;
+    height: 380px;
+    margin-bottom: 40px;
+    background: url("./images/image-hero-mobile.png");
+    background-size: 100% 100%;
+  }
+  
+  .header-img img {
+    display: none;
+  }
+  
+  .main-content {
+    width: 100%;
+    height: auto;
+    padding: 0px 0px 30px;
+    text-align: center;
+    }
+  
+  .main-content h1 {
+    color: hsl(0, 0%, 8%);
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+  }
+  
+  .main-content p {
+    color: hsl(0, 0%, 41%);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .main-content button {
+    width: 130px;
+    height: auto;
+    font-size: .9rem;
+    padding: 10px 0px;
+    background: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-bottom: 30px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+  
+  .main-content button:hover {
+    color: hsl(0, 0%, 8%);
+    background: hsl(0, 0%, 98%);
+    border: 2px solid hsl(0, 0%, 8%);
+    font-weight: 600;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+  
+  .brand-imgs {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .brand-imgs img {
+    width: 60px;
+  }
+
+  .attribution { 
+    font-size: .9rem; 
+    text-align: center;
+    padding-bottom: 30px; 
+  }
+  
+  .attribution a {
+    color: hsl(228, 45%, 44%); 
+  }
+}
+
+/* Media queries for mobile phones */
+@media (min-width: 200px) and (max-width: 499px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  nav {
+    width: 100%;
+    height: 80px;
+    background: hsl(0, 0%, 98%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+    position: relative;
+  }
+  
+  .logo {
+    width: 10%;
+    height: auto;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+
+  .nav-icon {
+    cursor: pointer;
+  }
+  
+  .nav-menu {
+    width: 100%;
+    height: 100vh;
+    background: #0000005e;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+    display: none;
+  }
+  
+  .nav {
+    width: 50%;
+    height: 100vh;
+    background: hsl(0, 0%, 98%);
+    position: absolute;
+    top: 0%;
+    right: -50%;
+    padding: 30px;
+  }
+
+  .nav-close-icon {
+    width: 100%;
+    height: auto;
+    text-align: right;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+
+  /* Toggled class to show the side nav parent element that has a transparent background */
+  .show-parent {
+    display: block;
+  }
+  
+  /* Toggled class to show the side nav menu on ipad */
+  .show-nav {
+    animation: showNav 1s linear 1 normal forwards;
+    -webkit-animation: showNav 1s linear 1 normal forwards;
+  }
+
+  /* Animations to make the side nav menu slide in smoothly */
+  @keyframes showNav {
+    0% {
+      right: -50%;
+    }
+    100% {
+      right: 0%
+    }
+  }
+
+  /* Toggled class to hide the side nav parent element that has a transparent background */
+  .hide-parent {
+    animation: hideParent 1s linear 1 normal forwards;
+    -webkit-animation: hideParent 1s linear 1 normal forwards;
+  }
+
+  /* Animation to hide the parent side nav parent element that has a transparent background */
+  @keyframes hideParent {
+    0% {
+      opacity: 50%;
+    }
+    100% {
+      display: none;
+      opacity: 0%;
+    }
+  }
+
+  .hide-nav {
+    animation: hideNav 1s linear 1 normal forwards;
+    -webkit-animation: hideNav 1s linear 1 normal forwards;
+  }
+
+  @keyframes hideNav {
+    0% {
+      right: 0%;
+    }
+    100% {
+      right: -50%;
+      display: none;
+    }
+  }
+
+  .menu {
+    position: relative;
+    margin-bottom: 40px;
+    text-align: left;
+    padding-left: 0px;
+  }
+  
+  .menu li, .cta li {
+    font-size: 1rem;
+    color: hsl(0, 0%, 41%);
+    cursor: pointer;
+    letter-spacing: 1px;
+    list-style: none;
+    margin: 0px 0px 10px;
+  }
+  
+  .menu li:hover, .cta li:hover {
+    color: hsl(0, 0%, 8%);
+    font-weight: 600;
+  }
+  
+  .features, .company {
+    padding-left: 35px;
+    height: 0px;
+    overflow: hidden;
+  }
+
+  .show-feature {
+    animation: slidefeature 1s linear 1 normal forwards;
+    -webkit-animation: slidefeature 1s linear 1 normal forwards;
+    display: block;
+    overflow: hidden;
+  }
+
+  .show-company {
+    animation: slidecompany 1s linear 1 normal forwards;
+    -webkit-animation: slidecompany 1s linear 1 normal forwards;
+    display: block;
+    overflow: hidden;
+  }
+
+  @keyframes slidefeature {
+    25% {
+      height: 30px;
+    }
+    100% {
+      height: 120px;
+    }
+  }
+  
+  @keyframes slidecompany {
+    25% {
+      height: 21px;
+    }
+    100% {
+      height: 88px;
+    }
+  }
+
+  .company {
+    padding-left: 15px;
+  }
+  
+  .features li:nth-child(1) {
+    list-style-image: url("./images/icon-todo.svg");
+  }
+  
+  .features li:nth-child(2) {
+    list-style-image: url("./images/icon-calendar.svg");
+  }
+  
+  .features li:nth-child(3) {
+    list-style-image: url("./images/icon-reminders.svg");
+  }
+  
+  .features li:nth-child(4) {
+    list-style-image: url("./images/icon-planning.svg");
+  }
+
+  .cta {
+    width: 100%;
+    height: auto;
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .cta li:nth-child(2) {
+    width: 100%;
+    border: 1px solid hsl(0, 0%, 41%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .cta li:nth-child(2):hover {
+    border: 2px solid hsl(0, 0%, 41%);
+  }
+
+  main {
+    width: 100%;
+    height: auto;
+    margin: 30px auto 0px;
+    padding: 0px 10px;
+  }
+  
+  .header-img {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 40px;
+    background: url("./images/image-hero-mobile.png");
+    background-size: 100% 100%;
+  }
+  
+  .header-img img {
+    display: none;
+  }
+  
+  .main-content {
+    width: 100%;
+    height: auto;
+    padding: 0px 0px 30px;
+    text-align: center;
+    }
+  
+  .main-content h1 {
+    color: hsl(0, 0%, 8%);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .main-content p {
+    color: hsl(0, 0%, 41%);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .main-content button {
+    width: 130px;
+    height: auto;
+    font-size: .9rem;
+    padding: 10px 0px;
+    background: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-bottom: 30px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+  
+  .main-content button:hover {
+    color: hsl(0, 0%, 8%);
+    background: hsl(0, 0%, 98%);
+    border: 2px solid hsl(0, 0%, 8%);
+    font-weight: 600;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+  
+  .brand-imgs {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .brand-imgs img {
+    width: 60px;
+  }
+
+  .attribution { 
+    font-size: .9rem; 
+    padding-bottom: 30px; 
+    text-align: center; 
+  }
+  
+  .attribution a {
+    color: hsl(228, 45%, 44%); 
+  }
+}
