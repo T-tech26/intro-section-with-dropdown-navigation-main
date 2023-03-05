@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://t-tech26.github.io/intro-section-with-dropdown-navigation-main/)
+- Live Site URL: [Add live site URL here](https://t-tech26.github.io/intro-section-with-dropdown-navigation-main/)
 
 ### Built with
 
@@ -52,4 +52,4 @@ I will really want to be focusing on
 
 - Frontend Mentor - [@T-tech26](https://www.frontendmentor.io/profile/T-tech26)
 - LinkedIn - [@tariladei-doutua](https://www.linkedin.com/in/tariladei-doutua-109059226)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Twitter - [@TariDoutua](https://twitter.com/TariDoutua/status/1632193084711657472)
